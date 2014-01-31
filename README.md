@@ -1,6 +1,10 @@
 # MyMiddleware
 
-TODO: Write a gem description
+This is a template project mostly for internal usage. It consists of a Sinatra-server, configured to use SLIM-templates,
+custom SASS and CoffeScript -resources. It also utilizes Rack-Cache and tests itself via RSpec.
+
+The main purpose is to build some functionality on top of this working template and to inject it in a Rails-app as
+Rack::Middleware.
 
 ## Installation
 
@@ -18,7 +22,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Include in your local app's config.ru
+
+    require 'my_middleware' (unless you use Bundler)
+
+    ...
+
+    map '/middleware' do
+      run MyMiddleware::Server.new
+    end
+
+    ...
+
+    run YouRailsApplication
+
 
 ## Contributing
 
