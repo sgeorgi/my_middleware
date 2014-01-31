@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= MyMiddleware
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    link rel="stylesheet" href="/css/bootstrap.min.css"
+    link rel="stylesheet" href="/css/my_middleware.css"
+    script src="https://code.jquery.com/jquery.js"
+    - settings.javascripts.each do |script|
+      script src="js/#{script}"
+body
+  == yield
