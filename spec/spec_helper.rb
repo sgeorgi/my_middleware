@@ -1,7 +1,7 @@
 require 'simplecov'
 SimpleCov.start
 
-require File.join(File.dirname(__FILE__), '..', 'my_middleware.rb')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'my_middleware.rb')
 
 require 'sinatra'
 require 'rack/test'
@@ -15,7 +15,7 @@ set :logging, false
 
 module SinatraSpecHelpers
   def app
-    MyMiddleware.new
+    MyMiddleware::Server.new
   end
 end
 

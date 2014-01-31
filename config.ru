@@ -1,5 +1,5 @@
-require './my_middleware'
+$LOAD_PATH.unshift 'lib'
+require 'my_middleware'
 
-CACHE = false
 use Rack::Deflater
-run MyMiddleware
+run MyMiddleware::Server.new
