@@ -22,10 +22,12 @@ Gem::Specification.new do |spec|
   spec.add_dependency "sass"
   spec.add_dependency "slim"
   spec.add_dependency "coffee-script"
+  spec.add_dependency 'tilt', '>= 1.3.4', '~> 1.3'
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rack-test"
   spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "inch"
 end
